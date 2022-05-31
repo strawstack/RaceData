@@ -8,7 +8,7 @@
 
 [Tamper Monkey Script for Scraping Data](https://github.com/strawstack/RaceData/blob/main/tamper_monkey.js)
 
-[Glitch Server](https://glitch.com/edit/#!/developing-familiar-brisket)
+[Glitch Server for Collecting Data from Tamper Monkey](https://glitch.com/edit/#!/developing-familiar-brisket)
 
 ![](./race_data.png)
 ![](./race_data_combined.png)
