@@ -1,0 +1,17 @@
+{
+  "name": "racedata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-html-parser": "^5.3.3",
+    "phantomjs-prebuilt2": "^2.1.13",
+    "webdriverio": "^7.19.7",
+    "zombie": "^6.1.4"
+  }
+}
