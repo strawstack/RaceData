@@ -16,6 +16,8 @@ function main() {
             }
         }
 
+        times[times.length - 1] += ",";
+
         fs.writeFileSync('./data/finish_times/2022_full_finish.csv', times.join(",\n"));
 
       } catch (err) {
