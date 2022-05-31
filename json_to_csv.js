@@ -13,11 +13,10 @@ function main() {
             let finish_time = item.details.at_42_2.time_of_day; 
             if (finish_time !== null) {
                 times.push(finish_time);
-                console.log(finish_time, item.bib);
             }
         }
 
-        //fs.writeFileSync('./data/finish_times/2022_full_finish.csv', times.join("\n"));
+        fs.writeFileSync('./data/finish_times/2022_full_finish.csv', times.join(",\n"));
 
       } catch (err) {
         console.error(err);
