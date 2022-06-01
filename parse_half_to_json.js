@@ -21,14 +21,14 @@ function gs(element) {
   return gd("span", element);
 }
 
-const MAX_FILE = 205;
-const YEAR = 2022;
+const MAX_FILE = 218;
+const YEAR = 2019;
 
 function main() {
   let data_obj = [];
   for (let f = 0; f <= MAX_FILE; f++) {
     try {
-      const data = fs.readFileSync(`./data/2022_half/${f}.txt`, 'utf8');
+      const data = fs.readFileSync(`./data/${YEAR}_half/${f}.txt`, 'utf8');
       let root = HTMLParser.parse(data);
       let table = root.querySelector("tbody.ui-datatable-data.ui-widget-content");
       let rows = table.childNodes;
@@ -39,7 +39,7 @@ function main() {
           let cells = rows[r].querySelectorAll("td");
           assert.equal(cells.length, 11);
           let extra_cells = rows[r + 1].querySelector("td").querySelectorAll("tbody>tr");
-          assert.equal(extra_cells.length, 7);
+          assert.equal(extra_cells.length, 6);
     
           data_obj.push(
             {
@@ -73,7 +73,7 @@ function main() {
                   category: gs(extra_cells[1].childNodes[8]),
                   time_of_day: gs(extra_cells[1].childNodes[9]),
                 },
-                at_11: {
+                at_14_9: {
                   split_time: gs(extra_cells[2].childNodes[2]),
                   pace: gs(extra_cells[2].childNodes[3]),
                   distance: gs(extra_cells[2].childNodes[4]),
@@ -83,7 +83,7 @@ function main() {
                   category: gs(extra_cells[2].childNodes[8]),
                   time_of_day: gs(extra_cells[2].childNodes[9]),
                 },
-                at_16: {
+                at_18_9: {
                   split_time: gs(extra_cells[3].childNodes[2]),
                   pace: gs(extra_cells[3].childNodes[3]),
                   distance: gs(extra_cells[3].childNodes[4]),
@@ -93,7 +93,7 @@ function main() {
                   category: gs(extra_cells[3].childNodes[8]),
                   time_of_day: gs(extra_cells[3].childNodes[9]),
                 },
-                at_18_9: {
+                at_21_1: {
                   split_time: gs(extra_cells[4].childNodes[2]),
                   pace: gs(extra_cells[4].childNodes[3]),
                   distance: gs(extra_cells[4].childNodes[4]),
@@ -102,17 +102,7 @@ function main() {
                   gender: gs(extra_cells[4].childNodes[7]),
                   category: gs(extra_cells[4].childNodes[8]),
                   time_of_day: gs(extra_cells[4].childNodes[9]),
-                },
-                at_21_1: {
-                  split_time: gs(extra_cells[5].childNodes[2]),
-                  pace: gs(extra_cells[5].childNodes[3]),
-                  distance: gs(extra_cells[5].childNodes[4]),
-                  race_time: gs(extra_cells[5].childNodes[5]),
-                  overall: gs(extra_cells[5].childNodes[6]),
-                  gender: gs(extra_cells[5].childNodes[7]),
-                  category: gs(extra_cells[5].childNodes[8]),
-                  time_of_day: gs(extra_cells[5].childNodes[9]),
-                },                                                                                         
+                },                                                                                      
               }
             }
           );

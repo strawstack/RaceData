@@ -21,14 +21,14 @@ function gs(element) {
   return gd("span", element);
 }
 
-const MAX_FILE = 81;
-const YEAR = 2022;
+const MAX_FILE = 70;
+const YEAR = 2018;
 
 function main() {
   let data_obj = [];
   for (let f = 0; f <= MAX_FILE; f++) {
     try {
-      const data = fs.readFileSync(`./data/2022_full/${f}.txt`, 'utf8');
+      const data = fs.readFileSync(`./data/${YEAR}_full/${f}.txt`, 'utf8');
       let root = HTMLParser.parse(data);
       let table = root.querySelector("tbody.ui-datatable-data.ui-widget-content");
       let rows = table.childNodes;
