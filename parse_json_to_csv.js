@@ -1,7 +1,7 @@
 let assert = require('node:assert');
 const fs = require('fs');
 
-const YEAR = 2015;
+const YEAR = 2016;
 const RACE_TYPE = "half";
 
 function main() {
