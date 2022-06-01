@@ -21,8 +21,8 @@ function gs(element) {
   return gd("span", element);
 }
 
-const MAX_FILE = 287;
-const YEAR = 2017;
+const MAX_FILE = 291;
+const YEAR = 2015;
 
 function main() {
   let data_obj = [];
@@ -63,7 +63,7 @@ function main() {
                   category: gs(extra_cells[0].childNodes[8]),
                   time_of_day: gs(extra_cells[0].childNodes[9]),
                 },
-                at_21_1: {
+                at_11_1: {
                   split_time: gs(extra_cells[1].childNodes[2]),
                   pace: gs(extra_cells[1].childNodes[3]),
                   distance: gs(extra_cells[1].childNodes[4]),
@@ -72,7 +72,17 @@ function main() {
                   gender: gs(extra_cells[1].childNodes[7]),
                   category: gs(extra_cells[1].childNodes[8]),
                   time_of_day: gs(extra_cells[1].childNodes[9]),
-                },                                                                                   
+                },            
+                at_21_1: {
+                  split_time: gs(extra_cells[2].childNodes[2]),
+                  pace: gs(extra_cells[2].childNodes[3]),
+                  distance: gs(extra_cells[2].childNodes[4]),
+                  race_time: gs(extra_cells[2].childNodes[5]),
+                  overall: gs(extra_cells[2].childNodes[6]),
+                  gender: gs(extra_cells[2].childNodes[7]),
+                  category: gs(extra_cells[2].childNodes[8]),
+                  time_of_day: gs(extra_cells[2].childNodes[9]),
+                },                                                                               
               }
             }
           );
