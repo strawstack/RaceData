@@ -21,8 +21,8 @@ function gs(element) {
   return gd("span", element);
 }
 
-const MAX_FILE = 70;
-const YEAR = 2018;
+const MAX_FILE = 114;
+const YEAR = 2017;
 
 function main() {
   let data_obj = [];

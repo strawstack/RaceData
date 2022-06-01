@@ -21,8 +21,8 @@ function gs(element) {
   return gd("span", element);
 }
 
-const MAX_FILE = 218;
-const YEAR = 2019;
+const MAX_FILE = 190;
+const YEAR = 2018;
 
 function main() {
   let data_obj = [];
@@ -39,7 +39,7 @@ function main() {
           let cells = rows[r].querySelectorAll("td");
           assert.equal(cells.length, 11);
           let extra_cells = rows[r + 1].querySelector("td").querySelectorAll("tbody>tr");
-          assert.equal(extra_cells.length, 6);
+          assert.equal(extra_cells.length, 3);
     
           data_obj.push(
             {
@@ -53,7 +53,7 @@ function main() {
               at_10: gs(cells[9]),
               at_21_1: gs(cells[10]),
               details: {
-                at_8_4: {
+                at_10: {
                   split_time: gs(extra_cells[0].childNodes[2]),
                   pace: gs(extra_cells[0].childNodes[3]),
                   distance: gs(extra_cells[0].childNodes[4]),
@@ -63,7 +63,7 @@ function main() {
                   category: gs(extra_cells[0].childNodes[8]),
                   time_of_day: gs(extra_cells[0].childNodes[9]),
                 },
-                at_10: {
+                at_21_1: {
                   split_time: gs(extra_cells[1].childNodes[2]),
                   pace: gs(extra_cells[1].childNodes[3]),
                   distance: gs(extra_cells[1].childNodes[4]),
@@ -72,37 +72,7 @@ function main() {
                   gender: gs(extra_cells[1].childNodes[7]),
                   category: gs(extra_cells[1].childNodes[8]),
                   time_of_day: gs(extra_cells[1].childNodes[9]),
-                },
-                at_14_9: {
-                  split_time: gs(extra_cells[2].childNodes[2]),
-                  pace: gs(extra_cells[2].childNodes[3]),
-                  distance: gs(extra_cells[2].childNodes[4]),
-                  race_time: gs(extra_cells[2].childNodes[5]),
-                  overall: gs(extra_cells[2].childNodes[6]),
-                  gender: gs(extra_cells[2].childNodes[7]),
-                  category: gs(extra_cells[2].childNodes[8]),
-                  time_of_day: gs(extra_cells[2].childNodes[9]),
-                },
-                at_18_9: {
-                  split_time: gs(extra_cells[3].childNodes[2]),
-                  pace: gs(extra_cells[3].childNodes[3]),
-                  distance: gs(extra_cells[3].childNodes[4]),
-                  race_time: gs(extra_cells[3].childNodes[5]),
-                  overall: gs(extra_cells[3].childNodes[6]),
-                  gender: gs(extra_cells[3].childNodes[7]),
-                  category: gs(extra_cells[3].childNodes[8]),
-                  time_of_day: gs(extra_cells[3].childNodes[9]),
-                },
-                at_21_1: {
-                  split_time: gs(extra_cells[4].childNodes[2]),
-                  pace: gs(extra_cells[4].childNodes[3]),
-                  distance: gs(extra_cells[4].childNodes[4]),
-                  race_time: gs(extra_cells[4].childNodes[5]),
-                  overall: gs(extra_cells[4].childNodes[6]),
-                  gender: gs(extra_cells[4].childNodes[7]),
-                  category: gs(extra_cells[4].childNodes[8]),
-                  time_of_day: gs(extra_cells[4].childNodes[9]),
-                },                                                                                      
+                },                                                                                   
               }
             }
           );
