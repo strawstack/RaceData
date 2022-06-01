@@ -21,8 +21,8 @@ function gs(element) {
   return gd("span", element);
 }
 
-const MAX_FILE = 114;
-const YEAR = 2017;
+const MAX_FILE = 116;
+const YEAR = 2015;
 
 function main() {
   let data_obj = [];
@@ -37,7 +37,7 @@ function main() {
       for (let r = 0; r < rows.length - 1; r += 2) {
         try {
           let cells = rows[r].querySelectorAll("td");
-          assert.equal(cells.length, 15);
+          assert.equal(cells.length, 14);
           let extra_cells = rows[r + 1].querySelector("td").querySelectorAll("tbody>tr");
           assert.equal(extra_cells.length, 10);
     
@@ -46,16 +46,16 @@ function main() {
               bib: gs(cells[2]),
               name: gd("a", cells[3]),
               city: gs(cells[4]),
-              country: gs(cells[5]),
-              category: gs(cells[6]),
-              rank: gs(cells[7]),
-              gender_place: gs(cells[8]),
-              cat_place: gs(cells[9]),
-              at_10: gs(cells[10]),
-              at_21_1: gs(cells[11]),
-              at_30: gs(cells[12]),
-              at_40: gs(cells[13]),
-              at_42_2: gs(cells[14]),
+              //country: gs(cells[5]),
+              category: gs(cells[5]),
+              rank: gs(cells[6]),
+              gender_place: gs(cells[7]),
+              cat_place: gs(cells[8]),
+              at_10: gs(cells[9]),
+              at_21_1: gs(cells[10]),
+              at_30: gs(cells[11]),
+              at_40: gs(cells[12]),
+              at_42_2: gs(cells[13]),
               details: {
                 at_5: {
                   split_time: gs(extra_cells[0].childNodes[2]),
@@ -153,6 +153,7 @@ function main() {
 
         } catch (e) {
           console.log(`error: f: ${f}, r: ${r}`);
+          console.log(e);
         }
       }
     
