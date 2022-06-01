@@ -8,6 +8,8 @@
 
 [Observable Plot Notebook](https://observablehq.com/@strawstack/racedata)
 
+[Observable Data Notebook](https://observablehq.com/@strawstack/race-weekend-data)
+
 [View Raw Data](https://github.com/strawstack/RaceData/tree/main/data/json)
 
 ## Code
